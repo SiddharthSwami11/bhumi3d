@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   PERMANENT DARK NEUMORPHISM DESIGN SYSTEM & TOKENS
+   ========================================================================== */
+:root,
+html,
+.dark {
+  --surface-canvas: #0B0F17;
+  --surface-card: #151D2C;
+  --surface-inset: #0F172A;
+  --border-clean: rgba(51, 65, 85, 0.6);
+  --text-primary: #F1F5F9;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+
+  --neu-base: #1E2430;
+  --neu-dark-shadow: #131720;
+  --neu-light-highlight: #293140;
+  --neu-subtle-shadow: #141822;
+  --neu-text-primary: #F1F5F9;
+  --neu-text-secondary: #94A3B8;
+  --neu-text-muted: #64748B;
+  --neu-accent: #00E5FF;
+  --neu-accent-secondary: #10B981;
+  --neu-border: rgba(41, 49, 64, 0.5);
+
+  /* Dark Neumorphic Shadow Tokens */
+  --shadow-raised: 5px 5px 12px #131720, -5px -5px 12px #293140;
+  --shadow-raised-sm: 3px 3px 8px #131720, -3px -3px 8px #293140;
+  --shadow-inset: inset 4px 4px 8px #131720, inset -4px -4px 8px #293140;
+  --shadow-inset-sm: inset 2px 2px 4px #131720, inset -2px -2px 4px #293140;
+  --shadow-flat: 0 4px 10px rgba(0, 0, 0, 0.5);
+  --shadow-btn: 4px 4px 10px #131720, -4px -4px 10px #293140;
+  --shadow-btn-hover: 2px 2px 6px #131720, -2px -2px 6px #293140;
+  --shadow-btn-active: inset 3px 3px 6px #131720, inset -3px -3px 6px #293140;
+}
+
+.neu-surface {
+  background-color: #1E2430 !important;
+}
+
+.neu-raised {
+  background: var(--neu-base) !important;
+  box-shadow: var(--shadow-raised) !important;
+  border: 1px solid var(--neu-border) !important;
+  border-radius: 6px;
+}
+
+.neu-raised-sm {
+  background: var(--neu-base) !important;
+  box-shadow: var(--shadow-raised-sm) !important;
+  border: 1px solid var(--neu-border) !important;
+  border-radius: 6px;
+}
+
+.neu-inset {
+  background: var(--neu-base) !important;
+  box-shadow: var(--shadow-inset) !important;
+  border: 1px solid var(--neu-border) !important;
+  border-radius: 6px;
+}
+
+.neu-inset-sm {
+  background: var(--neu-base) !important;
+  box-shadow: var(--shadow-inset-sm) !important;
+  border: 1px solid var(--neu-border) !important;
+  border-radius: 6px;
+}
+
+.neu-flat {
+  background: var(--neu-base) !important;
+  box-shadow: var(--shadow-flat) !important;
+}
+
+.neu-btn,
+.neu-button {
+  background: var(--neu-base) !important;
+  color: var(--neu-text-primary) !important;
+  box-shadow: var(--shadow-btn) !important;
+  border: 1px solid var(--neu-border) !important;
+  transition: all 0.15s ease-in-out;
+}
+
+.neu-btn:hover,
+.neu-button:hover {
+  box-shadow: var(--shadow-btn-hover) !important;
+}
+
+.neu-btn:active,
+.neu-btn-active,
+.neu-button:active,
+.neu-button-active {
+  box-shadow: var(--shadow-btn-active) !important;
+  color: var(--neu-accent) !important;
+}
+
+/* ==========================================================================
+   GLOBAL LAYOUT & RESET
+   ========================================================================== */
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #0F172A;
+  color: #F1F5F9;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--neu-dark-shadow);
+  border-radius: 3px;
+  opacity: 0.5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neu-text-secondary);
+}
+
+/* Cesium specific overrides */
+.cesium-viewer-bottom {
+  display: none !important;
+}
+
+.cesium-widget-credits {
+  display: none !important;
+}
